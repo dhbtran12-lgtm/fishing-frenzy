@@ -1,0 +1,1 @@
+Upload the CONTENTS of this folder into the EXISTING GitHub folder Fishing_Frenzy_V14_Online_Ready (not another nested folder). Render Root Directory remains Fishing_Frenzy_V14_Online_Ready. Commit and deploy latest commit. Test 50 devices before class. Render free instances may sleep/restart; room state is in memory and resets on restart.

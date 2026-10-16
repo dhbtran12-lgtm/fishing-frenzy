@@ -1,0 +1,11 @@
+FISHING FRENZY - ONLINE DEPLOYMENT
+
+1. Upload all files in this folder to the ROOT of a GitHub repository.
+2. Render.com -> New -> Web Service -> Connect repository.
+3. Runtime: Node. Build Command: npm install. Start Command: npm start.
+4. After deployment, teacher: https://YOUR-APP.onrender.com/teacher.html
+   Student: https://YOUR-APP.onrender.com/player.html
+
+Notes: Rooms and scores are stored in server memory. They disappear if hosting restarts or sleeps. Use one server instance. Free hosting may sleep and take time to wake. Keep the teacher tab active during a session.
+
+Bugfix: student player-screen.css is now served correctly.
