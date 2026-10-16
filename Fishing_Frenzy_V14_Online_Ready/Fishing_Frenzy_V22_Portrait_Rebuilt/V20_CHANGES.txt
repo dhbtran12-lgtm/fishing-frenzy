@@ -1,0 +1,1 @@
+V20 portrait fix: compact boat to ~20% of the canvas height, distribute 52 fish in separate 4-column lanes across the sea, reduce overlap, preserve sprite proportions and retain original multiplayer server and teacher screen. Mobile boat shows up to 4 avatars; all students remain connected and scored.

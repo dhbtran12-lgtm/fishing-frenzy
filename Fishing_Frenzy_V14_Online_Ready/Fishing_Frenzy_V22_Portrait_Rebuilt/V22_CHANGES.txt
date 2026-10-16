@@ -1,0 +1,1 @@
+V22 portrait rebuild: smaller boat (native draw scale .52), sea starts at 105/variable-height canvas, 32 non-overlapping moving fish in 4 columns x 8 rows, separate native coordinate hit testing, V22 cache bust. Desktop/teacher/server preserved.
