@@ -1,0 +1,7 @@
+V17 LARGE CLASSROOM
+- Raised per-room admission limit to 120 students.
+- One serialized SSE broadcast per room; skip clients with excessive output buffering.
+- Added SSE retry hint and proxy buffering header.
+- These are capacity-oriented changes, NOT a verified 120-device load test.
+- One Node.js instance only: do not run multiple Render replicas without shared state/pub-sub.
+- For large classes, use a paid always-on instance and conduct a real 120-device rehearsal.

@@ -1,0 +1,1 @@
+V16 Classroom 50: supports up to 60 joins per room (target 50 learners + teacher); reduces detached canvas animation loops; rejects late catches; health endpoint; retains V15 portrait UI. Capacity is a design target, not a guarantee under actual classroom Wi-Fi/hosting. Test with real devices before a live lesson.
