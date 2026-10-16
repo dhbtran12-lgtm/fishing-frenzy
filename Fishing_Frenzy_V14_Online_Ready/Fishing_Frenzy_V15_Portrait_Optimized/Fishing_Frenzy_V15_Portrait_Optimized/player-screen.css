@@ -1,0 +1,56 @@
+/* Fishing Frenzy V12 — adaptive, single-viewport player UI */
+html,body{height:100%;margin:0;overflow:hidden}body{min-height:0}.shell{height:100vh;height:100dvh;max-width:none;padding:6px 10px;display:flex;flex-direction:column;overflow:hidden}.top{flex:0 0 auto;min-height:34px;flex-wrap:nowrap}.top .logo{font-size:clamp(15px,2.2vw,26px)}.top .pill{font-size:12px;padding:5px 8px}#game{flex:1;min-height:0;display:flex;flex-direction:column}.play-layout{display:flex;flex-direction:column;flex:1;min-height:0}.play-top{display:flex;gap:6px;align-items:center;flex:0 0 auto;min-height:36px}.play-top .pill{font-size:clamp(11px,1.4vw,16px);padding:4px 8px}.play-top .status{flex:1;margin:0;padding:5px 8px;font-size:clamp(11px,1.25vw,16px);line-height:1.15;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.play-area{flex:1;min-height:0;display:grid;grid-template-columns:clamp(120px,18vw,200px) minmax(0,1fr) clamp(100px,14vw,150px);gap:8px;padding-top:6px}.play-area .stage{min-height:0;height:100%;margin:0;display:flex;align-items:center;justify-content:center;overflow:hidden}.play-area .stage canvas{width:100%;height:100%;object-fit:contain;aspect-ratio:auto;touch-action:manipulation}.skill-side,.answers-side{min-height:0;border:3px solid #694832;background:#ffebbc;border-radius:10px;padding:6px;display:flex;flex-direction:column;gap:5px}.side-heading{text-align:center;font-size:clamp(12px,1.4vw,18px);font-weight:1000;color:#203b5c}.skill-side .controls{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,minmax(0,1fr));gap:5px;flex:1;min-height:0}.skill-side .power{min-height:0;height:100%;font-size:clamp(10px,1.1vw,14px);padding:3px;line-height:1.1;overflow:hidden;touch-action:manipulation}.skill-side .power .sym{font-size:clamp(18px,3.7vh,31px);line-height:1.2}.answer-guide{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,minmax(0,1fr));gap:5px;flex:1;min-height:0}.answer-guide .creature-card{margin:0;min-height:0;padding:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-width:2px;font-size:10px;box-shadow:none}.answer-guide .creature-icon{font-size:clamp(20px,4vh,36px);line-height:1.1}.answer-guide .creature-card strong{font-size:clamp(14px,2.6vh,24px)}.stage .tag{top:5px;left:5px;font-size:clamp(10px,1vw,13px);padding:3px 5px}.welcome-title{font-size:clamp(14px,3vw,36px)}.welcome-sub{font-size:clamp(10px,1.5vw,16px)}
+/* Phone held upright: scene, answer key, skills stacked INSIDE the screen. */
+@media (max-width:700px) and (orientation:portrait){
+ .shell{padding:4px 5px 6px;gap:0}.top{min-height:29px}.top .logo{font-size:clamp(14px,4vw,19px)}.top .pill{font-size:10px;padding:3px 6px}.play-top{min-height:31px;gap:4px}.play-top .pill{font-size:10px;padding:3px 5px}.play-top .status{font-size:10px;padding:4px 5px}.play-area{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto auto;gap:5px;padding-top:4px}.play-area .stage{grid-column:1;grid-row:1;min-height:0;height:100%;border-width:4px;margin:0}.play-area .stage canvas{height:100%;width:100%;object-fit:fill}.answers-side{grid-column:1;grid-row:2;min-height:0;padding:3px 4px;gap:2px;border-width:2px}.skill-side{grid-column:1;grid-row:3;min-height:0;padding:3px 4px;gap:2px;border-width:2px}.side-heading{font-size:11px;line-height:1.1}.answer-guide{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr;gap:4px;flex:none}.answer-guide .creature-card{padding:2px 0;gap:0;min-height:48px}.answer-guide .creature-icon{font-size:clamp(20px,6vw,29px)}.answer-guide .creature-card strong{font-size:14px;line-height:1}.skill-side .controls{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr;gap:4px;flex:none}.skill-side .power{min-height:54px;padding:3px 1px;font-size:clamp(8px,2.4vw,11px);line-height:1.05;border-width:2px;border-bottom-width:3px;overflow-wrap:anywhere}.skill-side .power .sym{display:block;font-size:clamp(18px,6vw,27px);line-height:1.1}.stage .tag{font-size:10px}.welcome-title{font-size:clamp(17px,5vw,25px)}.welcome-sub{font-size:clamp(10px,2.7vw,14px)}
+}
+@media(max-width:700px) and (orientation:portrait) and (max-height:700px){.top{min-height:24px}.play-top{min-height:26px}.answer-guide .creature-card{min-height:37px}.answer-guide .creature-icon{font-size:18px}.skill-side .power{min-height:44px}.skill-side .power .sym{font-size:19px}.side-heading{font-size:10px}}
+@media(max-height:430px) and (orientation:landscape){.shell{padding:2px 5px}.top{min-height:22px}.play-top{min-height:24px}.play-area{gap:4px;padding-top:2px}.side-heading{font-size:10px}.skill-side .power .sym{font-size:16px}.skill-side .power{font-size:9px}.answer-guide .creature-icon{font-size:17px}}
+
+/* V13: fish already carry their A/B/C/D labels; no redundant answer legend. */
+.play-area{grid-template-columns:clamp(124px,18vw,205px) minmax(0,1fr);height:100%;overflow:hidden}
+.play-layout,.play-area,.skill-side,.stage{min-height:0;min-width:0}
+.play-area .stage{margin:0;max-height:100%;height:100%}
+.skill-side{height:100%;overflow:hidden}
+.skill-side .controls{min-height:0;grid-template-rows:repeat(4,minmax(0,1fr))}
+.skill-side .power{min-height:0;min-width:0;white-space:normal}
+#game{overflow:hidden}
+@media (max-width:700px) and (orientation:portrait){
+ .play-area{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;overflow:hidden}
+ .play-area .stage{grid-column:1;grid-row:1}
+ .skill-side{grid-column:1;grid-row:2;height:auto;max-height:min(22dvh,155px)}
+ .skill-side .controls{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:minmax(0,1fr)}
+ .skill-side .power{min-height:52px;font-size:clamp(9px,2.4vw,12px)}
+ .skill-side .power .sym{font-size:clamp(18px,6vw,28px)}
+}
+@media (max-width:700px) and (orientation:portrait) and (max-height:700px){
+ .skill-side{max-height:110px}.skill-side .power{min-height:40px}
+}
+
+/* V14: while fishing, no room PIN or separate timer bar; clock is inside scene. */
+.play-top.during-play{display:none!important}
+.stage .game-clock{position:absolute;top:9px;right:9px;z-index:12;background:#fff1c7;border:3px solid #654635;border-radius:9px;padding:6px 11px;font-size:clamp(16px,2.6vw,26px);font-weight:1000;color:#273a54;box-shadow:0 3px 0 #654635;pointer-events:none;font-variant-numeric:tabular-nums}
+@media(max-width:700px) and (orientation:portrait){.stage .game-clock{top:5px;right:5px;padding:3px 7px;font-size:clamp(15px,5vw,21px);border-width:2px}}
+
+/* V15: portrait-first full-bleed fishing. No horizontal answer panel. */
+@media (max-width:700px) and (orientation:portrait){
+ html,body{width:100%;overflow:hidden}
+ .shell{width:100%;height:100dvh;padding:0 0 max(3px,env(safe-area-inset-bottom));box-sizing:border-box}
+ .top{padding:2px 8px;min-height:28px}
+ .play-layout,.play-area,#game{min-height:0}
+ .play-area{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;gap:3px;padding:0 3px 3px}
+ .play-area .stage{grid-row:1;grid-column:1;width:100%;height:100%;min-width:0;min-height:0;border-width:2px;border-radius:7px;box-shadow:none}
+ .play-area .stage canvas{display:block;width:100%;height:100%;object-fit:fill;touch-action:none}
+ .skill-side{grid-row:2;grid-column:1;max-height:none;height:auto;padding:3px;border-width:2px;border-radius:8px;gap:2px}
+ .skill-side .side-heading{display:none}
+ .skill-side .controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr;gap:3px}
+ .skill-side .power{min-width:0;min-height:55px;height:55px;padding:2px 1px;font-size:clamp(9px,2.5vw,12px);line-height:1.05;border-width:2px;white-space:normal}
+ .skill-side .power .sym{display:block;font-size:clamp(22px,7vw,29px)}
+ .play-top{min-height:26px}
+ .stage .game-clock{top:5px;right:5px;font-size:19px;z-index:15}
+ .stage .tag{font-size:10px;max-width:55%;white-space:normal}
+}
+@media (max-width:700px) and (orientation:portrait) and (max-height:680px){
+ .skill-side .power{min-height:45px;height:45px;font-size:9px}
+ .skill-side .power .sym{font-size:20px}
+}
