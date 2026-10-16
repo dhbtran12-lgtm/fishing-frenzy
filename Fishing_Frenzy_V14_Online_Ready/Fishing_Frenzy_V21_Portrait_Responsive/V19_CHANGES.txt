@@ -1,0 +1,1 @@
+V19 mobile portrait: tall 400x600 logical canvas, smaller proportional boat, more vertical swimming space, larger tappable fish, and responsive viewport. Teacher and server unchanged.

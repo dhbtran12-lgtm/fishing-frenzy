@@ -1,0 +1,1 @@
+V21 Portrait: dynamically match the pixel-art world to phone canvas aspect ratio; do not stretch sprites. Distribute 52 fish vertically across available sea space. Maintain desktop and multiplayer logic. Cache-bust art.js and CSS with v=21.
