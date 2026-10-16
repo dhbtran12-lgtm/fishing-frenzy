@@ -1,0 +1,2 @@
+Upload the CONTENTS of this folder into the existing GitHub folder Fishing_Frenzy_V14_Online_Ready, replacing matching files. Keep the Render Root Directory unchanged and deploy latest commit. Do not upload the ZIP as-is. Node 20+.
+Target max 120 students per room; real capacity depends on hosting and classroom network.

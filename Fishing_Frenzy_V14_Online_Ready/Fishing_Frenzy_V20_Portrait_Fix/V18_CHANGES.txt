@@ -1,0 +1,1 @@
+V18: Portrait student screen preserves 4:3 ocean artwork, no squeezing or stretching. Fish and boat maintain original proportions. All V17 classroom capacity and multiplayer functionality retained.
