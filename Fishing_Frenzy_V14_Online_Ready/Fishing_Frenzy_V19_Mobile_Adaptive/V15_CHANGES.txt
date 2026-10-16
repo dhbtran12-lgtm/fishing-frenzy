@@ -1,0 +1,1 @@
+V15: Portrait phone mode uses full width and fills the game area with a center-cropped, enlarged pixel scene. Touch-to-catch coordinates follow the crop. Four skills remain in a single row at the bottom; no ABCD legend; clock stays inside stage. Desktop and teacher layouts unchanged. Upload updated files to GitHub and redeploy Render.
